@@ -1,2 +1,48 @@
+
 {% include './main.html' %}
-<h1>Blogs</h1>
+{% load static %}
+<br>
+<br>
+<div class="row">
+    <div class="col">
+<div class="card" style="width: 18rem;">
+    <div class="card-body">
+      <h5 class="card-title">Total Orders</h5>
+      <h3 class="card-text">{{total_orders}}</h3>
+      
+    </div>
+  </div>
+</div>
+
+<div class="col">
+    <div class="card" style="width: 18rem;">
+      <div class="card-body">
+        <h5 class="card-title">No.of Customers</h5>
+        <h3 class="card-text">{{total_customers}}</h3>
+        
+      </div>
+    </div>
+  </div>
+
+<div class="col">
+  <div class="card" style="width: 18rem;">
+    <div class="card-body">
+      <h5 class="card-title">Orders Delivered</h5>
+      <h3 class="card-text">{{delivered}}</h3>
+      
+    </div>
+  </div>
+</div>
+
+<div class="col">
+  <div class="card" style="width: 18rem;">
+    <div class="card-body">
+      <h5 class="card-title">Orders Pending</h5>
+      <h3 class="card-text">{{pending}}</h3>
+      
+    </div>
+  </div>
+</div>
+
+
+</div>
