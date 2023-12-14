@@ -1,22 +1,30 @@
 {% load static %}
 {% include 'test_app/blog.html' %}
 <br>
-
+<style>
+    body{
+        background-color: #FFF7D4;
+    }
+</style>
 <br>
 <div class="row">
     <div class="col-md">
+        <h5>Customers</h5>
+            <hr>
         <div class="card card-body">
-            <h5>Customers</h5>
+            <a class="btn btn-primary btn-sm btn-block" href="">Create Customer</a>
         </div>
         <div class="card card-body">
             <table class="table">
                 <tr>
+                    <th>     view</th>
                     <th>Customer</th>
                     <th>Phone</th>
                     
                 </tr>
                 {% for customer in customers %}
                 <tr>
+                    <td><a class="btn btn-sm btn-info" href="{% url 'customers' customer.id %}"> view</a></td>
                     <td>{{customer.name}}</td> 
                     <td>{{customer.phone}}</td>
                     
@@ -30,8 +38,10 @@
 <br>
 
     <div class="col-md">
-        <div class="card card-body">
-            <h5>Last five Orders</h5>
+        <h5>Last five Orders</h5>
+        <hr>
+        <div class="card card-body" >
+            <a class="btn btn-primary btn-sm btn-block" href="{% url 'order_form' %}">Create Order</a>
         </div>
         <div class="card card-body">
             <table class="table">
@@ -47,8 +57,8 @@
                     <td>{{order.product}}</td> 
                     <td>{{order.date_created}}</td>
                     <td>{{order.status}}</td>
-                    <td><a href="">Update</a></td>
-                    <td><a href="">Delete</a></td>
+                    <td><a class="btn btn-sm btn-info" href="">Update</a></td>
+                    <td><a class="btn btn-sm btn-danger" href="">Delete</a></td>
                     </tr>
                 {% endfor %}
             </table>
