@@ -1,7 +1,14 @@
 {% load static %}
 {% include './main.html' %}
+<div class="row">
+    <div class="col-md">
+        <div class="card card-body">
 <form action="" method="POST">
+
     {% csrf_token %}
     {{form}}
-    <input type="submit" name="Submit">
+    <input class="btn btn-warning" type="submit" name="Submit">
+</div>
+</div>
+</div>
 </form>
