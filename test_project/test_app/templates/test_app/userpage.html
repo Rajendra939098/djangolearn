@@ -1,0 +1,75 @@
+{% load static %}
+{% include './main.html' %}
+
+<br>
+<div class="row1">
+
+
+
+    <div style="margin-left: 30px;" class="row">
+        <div class="col">
+    <div class="card" style="width: 15rem;">
+        <div class="card-body1">
+          <h5 style="text-align: center;" class="card-title">Total Orders</h5>
+          <hr>
+          <h3 style="text-align: center;padding: 30px;" class="card-text">{{total_orders}}</h3>
+          
+        </div>
+      </div>
+    </div>
+    
+    
+    
+    <div class="col">
+      <div class="card" style="width: 15rem;">
+        <div class="card-body1">
+          <h5 style="text-align: center;" class="card-title">Orders Delivered</h5>
+          <hr>
+          <h3 style="text-align: center;padding: 30px;" class="card-text">{{delivered}}</h3>
+          
+        </div>
+      </div>
+    </div>
+    
+    <div class="col">
+      <div class="card" style="width: 15rem;">
+        <div class="card-body1">
+          <h5 style="text-align: center;" class="card-title">Orders Pending</h5>
+          <hr>
+          <h3 style="text-align: center;padding: 30px;" class="card-text">{{pending}}</h3>
+          
+        </div>
+      </div>
+    </div>
+    <br>
+    <br>
+    <hr>
+
+<div class="def">
+<div class="abc">
+    <div class="row">
+        <div class="card card-body">
+            <table class="table">
+                <tr>
+                    <th>Products</th>
+                    <th>Category</th>
+                    <th>Date ordered</th>
+                    <th>Status</th>
+                    
+                </tr>
+                {% for order in orders %}
+                <tr>
+                    <td>{{order.product}}</td> 
+                    <td>{{order.product.category}}</td>
+                    <td>{{order.date_created}}</td>
+                    <td>{{order.status}}</td>
+                    
+                    </tr>
+                {% endfor %}
+            </table>
+        </div>
+        </div>
+       
+    </div>
+</div>
+</div>

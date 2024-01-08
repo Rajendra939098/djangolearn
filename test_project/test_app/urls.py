@@ -14,5 +14,7 @@ urlpatterns=[
    
     path('update_order/<str:pk>/',views.UpdateOrder,name='update_order'),
     path('delete/<str:pk>/',views.delete,name='delete'),
-    path('logout/',views.logout_page,name='logout')
+    path('logout/',views.logout_page,name='logout'),
+    path('userpage/',views.userpage,name='userpage'),
+    path('settings/',views.settings_page,name='settings')
 ]
